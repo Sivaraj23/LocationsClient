@@ -7,7 +7,7 @@
    border: solid 1px #ccc;
    min-height: 60px;
    display: block;
-   background: white;
+   background: rgb(202, 229, 255);
    border-radius: 4px;
    overflow: hidden;
  }
