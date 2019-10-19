@@ -1,0 +1,60 @@
+<div class="content">
+
+  <form class="example-form">
+    <table>
+      <tr>
+        <td>
+          Please choose the location for which nearby locations has to be found
+        </td>
+        <td>
+          <mat-form-field class="example-full-width">
+            <input type="text" placeholder="Location" aria-label="Location" matInput [formControl]="myControl"
+              [matAutocomplete]="auto">
+            <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+              <mat-option *ngFor="let option of filteredOptions |async" [value]="option">
+                {{option.location}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Number of locations to be retrived (returns all by default)
+        </td>
+        <td>
+          <mat-form-field>
+
+            <input type="number" class="example-full-width" [formControl]="total" matInput placeholder="in numbers">
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+
+          <mat-error *ngIf="errorMessage">{{errorMessage}}</mat-error>
+          <button class="full-width" mat-raised-button (click)="fetchLocations()">Fetch Nearby locations</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+  <hr size="5px">
+  <div class="nearbyLocations">
+    <div *ngIf="nearbyLocations">Nearby Locations for {{selectedLocation.location}} are:<br>
+
+      <div *ngFor="let loc of nearbyLocations" class="mycard">
+        <mat-card class="example-card">
+
+          <mat-card-header>
+            <mat-card-title>{{loc.location.location}}</mat-card-title>
+          </mat-card-header>
+
+          <mat-card-content>
+            latitude : {{loc.location.latitude}}<br>longitude : {{loc.location.longitude}}
+          </mat-card-content>
+
+        </mat-card>
+      </div>
+
+    </div>
