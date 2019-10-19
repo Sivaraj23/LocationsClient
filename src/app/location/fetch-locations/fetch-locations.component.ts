@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FetchlocationService } from './fetchlocation.service';
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-fetch-locations',
@@ -19,5 +20,8 @@ export class FetchLocationsComponent implements OnInit {
     this.fetch.fetchLocations().subscribe((data) => {
       this.locations = data;
     });
+  }
+  drop(event: CdkDragDrop<string[]>) {
+    moveItemInArray(this.locations, event.previousIndex, event.currentIndex);
   }
 }
