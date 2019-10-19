@@ -1,3 +1,4 @@
+import { API_URL } from './../../shared/url';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -7,13 +8,13 @@ import { Observable } from 'rxjs';
 })
 export class FindnearbylocationService {
 
-  
+
   constructor(private http: HttpClient) { }
 
 
-  fetchLocations(id,total):Observable <any>{
-    if(total==null)
-    total=0;
-    return this.http.get("http://localhost:3000/locations/"+id+"?limit="+total);
+  fetchLocations(id, total): Observable<any> {
+    if (total == null)
+      total = 0;
+    return this.http.get(API_URL.locations + id + "?limit=" + total);
   }
 }

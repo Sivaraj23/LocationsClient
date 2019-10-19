@@ -1,3 +1,4 @@
+import { API_URL } from './../../shared/url';
 import { Injectable } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
@@ -11,8 +12,8 @@ export class FetchlocationService {
   constructor(private http: HttpClient) { }
 
 
-  fetchLocations():Observable <any>{
-    return this.http.get("http://localhost:3000/locations");
+  fetchLocations(): Observable<any> {
+    return this.http.get(API_URL.locations);
   }
 
 }

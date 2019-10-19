@@ -8,16 +8,16 @@ import { FetchlocationService } from './fetchlocation.service';
 })
 export class FetchLocationsComponent implements OnInit {
 
-  constructor(private fetch:FetchlocationService) { }
+  constructor(private fetch: FetchlocationService) { }
 
-  locations=[];
+  locations = [];
 
-  ngOnInit() 
-  {
-   this.fetchAlllocations();
+  ngOnInit() {
+    this.fetchAlllocations();
   }
-fetchAlllocations(){ 
-  this.fetch.fetchLocations().subscribe((data)=>{
-  this.locations=data;
-});}
+  fetchAlllocations() {
+    this.fetch.fetchLocations().subscribe((data) => {
+      this.locations = data;
+    });
+  }
 }

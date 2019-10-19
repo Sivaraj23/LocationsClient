@@ -1,26 +1,25 @@
+<mat-card class="text-center">
+  <mat-card-header>
+    <div mat-card-avatar></div>
+    <mat-card-title>Choose File to upload</mat-card-title>
+  </mat-card-header>
 
-<mat-card  class="text-center">
-    <mat-card-header>
-      <div mat-card-avatar ></div>
-      <mat-card-title>Choose File to upload</mat-card-title>
-    </mat-card-header>
-    
-    <mat-card-content>
-        <div class="form-group">
-            <input class="btn btn-primary shadow"  type="file" name="image" (change)="fileProgress($event)" />
-        </div>
-        <div *ngIf="fileUploadProgress">
-            Upload progress: {{ fileUploadProgress }}
-        </div>
-<mat-error >
-{{error}}</mat-error>
-        <div class="mb-3" *ngIf="uploadedFilePath">
-            {{uploadedFilePath}}
-        </div>
-         
-       
-    </mat-card-content>
-    <mat-card-actions>
-      <button class="btn btn-primary"  [disabled]="error||!fileData"  (click)="onSubmit()">Submit</button>
-    </mat-card-actions>
-  </mat-card>
+  <mat-card-content>
+    <div class="form-group">
+      <input class="btn btn-primary shadow" type="file" name="image" (change)="fileProgress($event)" />
+    </div>
+    <div *ngIf="fileUploadProgress">
+      Upload progress: {{ fileUploadProgress }}
+    </div>
+    <mat-error>
+      {{error}}</mat-error>
+    <div class="mb-3" *ngIf="uploadedFilePath">
+      {{uploadedFilePath}}
+    </div>
+
+
+  </mat-card-content>
+  <mat-card-actions>
+    <button class="btn btn-primary" [disabled]="error||!fileData" (click)="onSubmit()">Submit</button>
+  </mat-card-actions>
+</mat-card>
