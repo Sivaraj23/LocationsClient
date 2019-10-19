@@ -39,21 +39,22 @@ export class FindnearbylocationComponent implements OnInit {
     return location ? location.location : undefined;
   }
   fetchLocations() {
-    if (this.myControl.value == undefined)
-      this.errorMessage = "Please choose location";
+    if (this.myControl.value == undefined) {
+      this.errorMessage = 'Please choose location';
+    }
     else {
       this.errorMessage = null;
       this.selectedLocation = this.myControl.value;
 
-      if ((this.selectedLocation._id == undefined) && this.myControl.value != null) {
-        var found = 0;
+      if ((this.selectedLocation._id === undefined) && this.myControl.value != null) {
+        let found = 0;
         this.displayedOptions.forEach((location) => {
-          if (this.myControl.value == location.location) {
+          if (this.myControl.value === location.location) {
             this.selectedLocation = location;
             found = 1;
           }
         });
-        if (found == 0) {
+        if (found === 0) {
           this.errorMessage = 'The location is not available , please choose from list';
           return;
         }
@@ -70,6 +71,4 @@ export class FindnearbylocationComponent implements OnInit {
 
     return this.displayedOptions.filter(option => option.location.toLowerCase().indexOf(filterValue) === 0);
   }
-
-
 }

@@ -13,8 +13,9 @@ export class FindnearbylocationService {
 
 
   fetchLocations(id, total): Observable<any> {
-    if (total == null)
+    if (total == null) {
       total = 0;
-    return this.http.get(API_URL.locations + id + "?limit=" + total);
+    }
+    return this.http.get(API_URL.locations + id + '?limit=' + total);
   }
 }

@@ -7,14 +7,14 @@ import { MatTableModule } from '@angular/material/table';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { MatToolbarModule} from '@angular/material/toolbar';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatExpansionModule } from '@angular/material/expansion';
-import {DragDropModule} from '@angular/cdk/drag-drop';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatDatepickerModule } from '@angular/material/datepicker';
@@ -23,9 +23,9 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatBadgeModule } from '@angular/material/badge';
-import {MatTooltipModule} from '@angular/material/tooltip';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { ReactiveFormsModule } from '@angular/forms';
 
 
@@ -63,7 +63,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatSidenavModule
 
   ],
-  exports:[
+  exports: [
     MatCardModule,
     MatTabsModule,
     MatFormFieldModule,
@@ -78,7 +78,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatListModule,
     MatIconModule,
     MatExpansionModule,
-    MatProgressBarModule, 
+    MatProgressBarModule,
     MatDialogModule,
     MatProgressSpinnerModule,
     MatDatepickerModule,

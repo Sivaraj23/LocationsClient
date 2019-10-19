@@ -16,7 +16,7 @@ export class UploadService {
     return this.http.post(API_URL.csvUpload, formData, {
       reportProgress: true,
       observe: 'events'
-    })
+    });
   }
 
 

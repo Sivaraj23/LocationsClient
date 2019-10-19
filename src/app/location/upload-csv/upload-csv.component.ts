@@ -21,15 +21,15 @@ export class UploadCSVComponent implements OnInit {
   }
 
   fileProgress(fileInput: any) {
-    this.fileData = <File>fileInput.target.files[0];
+    this.fileData = fileInput.target.files[0] as File;
     this.validate();
   }
 
   validate() {
-    // Show preview 
-    var fileType = this.fileData.type;
+    // Show preview
+    let fileType = this.fileData.type;
     if (fileType.match(/(excel)$/) == null) {
-      this.error = "Please upload a csv file";
+      this.error = 'Please upload a csv file';
     } else {
       this.error = null;
     }
@@ -58,7 +58,6 @@ export class UploadCSVComponent implements OnInit {
 
       }
 
-    })
-
+    });
   }
 }
